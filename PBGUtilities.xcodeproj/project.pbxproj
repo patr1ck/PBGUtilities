@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CDFFCFDA14A2E030008FBCDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFFCFD914A2E030008FBCDC /* Foundation.framework */; };
-		CDFFCFE014A2E030008FBCDC /* PBGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFCFDF14A2E030008FBCDC /* PBGUtilities.m */; };
 		CDFFCFE814A2E030008FBCDC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFFCFE714A2E030008FBCDC /* SenTestingKit.framework */; };
 		CDFFCFEA14A2E030008FBCDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFFCFE914A2E030008FBCDC /* UIKit.framework */; };
 		CDFFCFEB14A2E030008FBCDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFFCFD914A2E030008FBCDC /* Foundation.framework */; };
 		CDFFCFEE14A2E030008FBCDC /* libPBGUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFFCFD614A2E030008FBCDC /* libPBGUtilities.a */; };
 		CDFFCFF414A2E030008FBCDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDFFCFF214A2E030008FBCDC /* InfoPlist.strings */; };
 		CDFFCFF714A2E030008FBCDC /* PBGUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFCFF614A2E030008FBCDC /* PBGUtilitiesTests.m */; };
+		CDFFD00414A2E060008FBCDC /* PBGJSONConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFFD00214A2E060008FBCDC /* PBGJSONConnection.h */; };
+		CDFFD00514A2E060008FBCDC /* PBGJSONConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFD00314A2E060008FBCDC /* PBGJSONConnection.m */; };
+		CDFFD00614A2E060008FBCDC /* PBGJSONConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFD00314A2E060008FBCDC /* PBGJSONConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +32,18 @@
 /* Begin PBXFileReference section */
 		CDFFCFD614A2E030008FBCDC /* libPBGUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPBGUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFFCFD914A2E030008FBCDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CDFFCFDD14A2E030008FBCDC /* PBGUtilities-Prefix.pch */ = {isa = PBXFileReference; path = "PBGUtilities-Prefix.pch"; sourceTree = "<group>"; };
-		CDFFCFDE14A2E030008FBCDC /* PBGUtilities.h */ = {isa = PBXFileReference; path = PBGUtilities.h; sourceTree = "<group>"; };
-		CDFFCFDF14A2E030008FBCDC /* PBGUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBGUtilities.m; sourceTree = "<group>"; };
+		CDFFCFDD14A2E030008FBCDC /* PBGUtilities-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PBGUtilities-Prefix.pch"; sourceTree = "<group>"; };
 		CDFFCFE614A2E030008FBCDC /* PBGUtilitiesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBGUtilitiesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFFCFE714A2E030008FBCDC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CDFFCFE914A2E030008FBCDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		CDFFCFF114A2E030008FBCDC /* PBGUtilitiesTests-Info.plist */ = {isa = PBXFileReference; path = "PBGUtilitiesTests-Info.plist"; sourceTree = "<group>"; };
+		CDFFCFF114A2E030008FBCDC /* PBGUtilitiesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PBGUtilitiesTests-Info.plist"; sourceTree = "<group>"; };
 		CDFFCFF314A2E030008FBCDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CDFFCFF514A2E030008FBCDC /* PBGUtilitiesTests.h */ = {isa = PBXFileReference; path = PBGUtilitiesTests.h; sourceTree = "<group>"; };
+		CDFFCFF514A2E030008FBCDC /* PBGUtilitiesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBGUtilitiesTests.h; sourceTree = "<group>"; };
 		CDFFCFF614A2E030008FBCDC /* PBGUtilitiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBGUtilitiesTests.m; sourceTree = "<group>"; };
+		CDFFD00014A2E049008FBCDC /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		CDFFD00114A2E054008FBCDC /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CDFFD00214A2E060008FBCDC /* PBGJSONConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGJSONConnection.h; sourceTree = "<group>"; };
+		CDFFD00314A2E060008FBCDC /* PBGJSONConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGJSONConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		CDFFCFCB14A2E030008FBCDC = {
 			isa = PBXGroup;
 			children = (
+				CDFFD00014A2E049008FBCDC /* README.markdown */,
+				CDFFD00114A2E054008FBCDC /* LICENSE */,
 				CDFFCFDB14A2E030008FBCDC /* PBGUtilities */,
 				CDFFCFEF14A2E030008FBCDC /* PBGUtilitiesTests */,
 				CDFFCFD814A2E030008FBCDC /* Frameworks */,
@@ -97,8 +103,8 @@
 		CDFFCFDB14A2E030008FBCDC /* PBGUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				CDFFCFDE14A2E030008FBCDC /* PBGUtilities.h */,
-				CDFFCFDF14A2E030008FBCDC /* PBGUtilities.m */,
+				CDFFD00214A2E060008FBCDC /* PBGJSONConnection.h */,
+				CDFFD00314A2E060008FBCDC /* PBGJSONConnection.m */,
 				CDFFCFDC14A2E030008FBCDC /* Supporting Files */,
 			);
 			path = PBGUtilities;
@@ -138,6 +144,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFFD00414A2E060008FBCDC /* PBGJSONConnection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFFCFE014A2E030008FBCDC /* PBGUtilities.m in Sources */,
+				CDFFD00514A2E060008FBCDC /* PBGJSONConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFFCFF714A2E030008FBCDC /* PBGUtilitiesTests.m in Sources */,
+				CDFFD00614A2E060008FBCDC /* PBGJSONConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
