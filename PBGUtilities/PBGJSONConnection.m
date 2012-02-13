@@ -95,4 +95,41 @@ static BOOL logging = NO;
     });
 }
 
++ (void)deleteAtURL:(NSURL *)inURL handleJSONResponseWithBlock:(void (^)(id responseObj))inBlock;
+{
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+		NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:inURL];
+		[request setHTTPMethod:@"DELETE"];
+		[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
+		NSURLResponse *response      = nil;
+		NSError *error               = nil;
+
+		NSData *responseData         = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+		if (responseData == nil && error) {
+			NSLog(@"ERROR: DELETE connection error: %@", [error localizedDescription]);
+			return;
+		}
+
+		NSError *jsonError           = nil;
+		id responseObject            = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+
+		if (responseObject == nil && jsonError) {
+			NSLog(@"ERROR: DELETE JSON Reading error: %@", [jsonError localizedDescription]);
+			return;
+		}
+
+		if (logging) {
+			NSLog(@"PBGJSONINTERFACELOGGING: Response Object for DELETE: %@\n\n", responseObject);
+		}
+
+		dispatch_async(dispatch_get_main_queue(), ^{
+			inBlock(responseObject);
+		});
+	});
+	}
+
+
 @end
